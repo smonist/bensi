@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Sail' rel='stylesheet' type='text/css'>
+
+	<meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+	<script>
+		window.onload = function() {
+		    document.body.style.backgroundColor = "red";
+
+		    var i = 0;
+		    var x = 0;
+			var colors_bg = ["#cf00fe", "#00fef3", "#5eff01", "#f8ff01", "#ff00cd"];
+			var colors_text = ["#1c0124", "#6d09f5", "#f922be", "#09b3e7", "#06e648"];
+		    
+		    setInterval(function() {
+				document.body.style.backgroundColor = colors_bg[i];
+				
+				i++;
+				if (i === 6) {
+					i = 0;
+				};
+
+
+				document.getElementById("bensi").setAttribute("style", "color:" + colors_text[x]);
+
+				x++;
+				if (x === 6) {
+					x = 0;
+				};
+		    }, 25);
+		};
+	</script>
+
+<div id="wrapper">
+	<div id="bensi">bensi</div>
+</div>
+</body>
+</html>
