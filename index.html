@@ -10,8 +10,6 @@
 <body>
 	<script>
 		window.onload = function() {
-		    document.body.style.backgroundColor = "red";
-
 		    var i = 0;
 		    var x = 0;
 			var colors_bg = ["#cf00fe", "#00fef3", "#5eff01", "#f8ff01", "#ff00cd"];
@@ -19,18 +17,10 @@
 		    
 		    setInterval(function() {
 				document.body.style.backgroundColor = colors_bg[i];
-				
+				document.getElementById("bensi").setAttribute("style", "color:" + colors_text[i]);
 				i++;
 				if (i === 6) {
 					i = 0;
-				};
-
-
-				document.getElementById("bensi").setAttribute("style", "color:" + colors_text[x]);
-
-				x++;
-				if (x === 6) {
-					x = 0;
 				};
 		    }, 25);
 		};
